@@ -5,6 +5,10 @@ module.exports = {
       fontFamily: {
         sans: ["Oswald", "sans-serif"],
       },
+      colors: {
+        customBlack: "#000000",
+        customWhite: "#ffffff",
+      },
     },
   },
   plugins: [],
