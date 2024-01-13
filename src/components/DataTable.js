@@ -2,6 +2,7 @@ import React from "react";
 import { FixedSizeList as List } from "react-window";
 import TableRow from "./TableRow";
 
+// DataTable component that renders a table with virtualized rows using react-window List component and TableRow component
 const DataTable = ({ data, handleCheckboxChange }) => (
   <div className="border border-gray-300">
     {/* Table Headings */}

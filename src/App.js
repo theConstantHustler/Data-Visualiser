@@ -3,6 +3,7 @@ import Plot from "react-plotly.js";
 import DataTable from "./components/DataTable";
 
 function App() {
+  // Initial data for table
   const initialData = Array.from({ length: 100 }, (_, index) => ({
     id: index + 1,
     name: `Item Number - ${index + 1}`,
@@ -12,12 +13,14 @@ function App() {
 
   const [data, setData] = useState(initialData);
 
+  // Handle checkbox change
   const handleCheckboxChange = (index) => {
     const newData = [...data];
     newData[index].checked = !newData[index].checked;
     setData(newData);
   };
 
+  // Get chart data from checked items only using useMemo hook to avoid unnecessary re-renders
   const chartData = useMemo(() => {
     return data.filter((item) => item.checked).map((item) => item.value);
   }, [data]);

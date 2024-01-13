@@ -1,5 +1,6 @@
 import React from "react";
 
+// TableRow component that renders a row with checkbox, id, name and value columns
 const TableRow = ({ index, style, data }) => {
   const row = data.data[index];
   return (
